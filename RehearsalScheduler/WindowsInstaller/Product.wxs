@@ -18,7 +18,7 @@
 				<Directory Id="INSTALLFOLDER" Name="RehearsalScheduler" />
 			</Directory>
       <Directory Id="ProgramMenuFolder">
-        <Directory Id="ApplicationProgramsFolder" Name="RehearsalScheduler"/>
+        <Directory Id="ApplicationProgramsFolder" Name="Rehearsal Scheduler"/>
       </Directory>
     </Directory>
 	</Fragment>
