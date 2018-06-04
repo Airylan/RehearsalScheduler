@@ -83,7 +83,7 @@
   </Fragment>
 
   <Fragment>
-    <DirectoryRef Id="ProgramMenuFolder">
+    <DirectoryRef Id="ApplicationProgramsFolder">
       <Component Id="ApplicationStartMenuShortcuts">
         <Shortcut Id="ApplicationStartMenuShortcut"
              Name="Rehearsal Scheduler"

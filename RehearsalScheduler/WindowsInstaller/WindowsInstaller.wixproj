@@ -7,7 +7,7 @@
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>d3a5336f-6cb0-4cd3-9d9c-595038a4df8b</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>WindowsInstaller</OutputName>
+    <OutputName>RehearsalScheduler</OutputName>
     <OutputType>Package</OutputType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
