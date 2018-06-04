@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\Services\Ser
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WindowsInstaller", "WindowsInstaller\WindowsInstaller.wixproj", "{D3A5336F-6CB0-4CD3-9D9C-595038A4DF8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceInterfaces", "ServiceInterfaces\ServiceInterfaces.csproj", "{DD5D9927-C008-4BE6-BA31-C22C75F41B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesTests", "..\ServicesTests\ServicesTests.csproj", "{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,22 @@ Global
 		{D3A5336F-6CB0-4CD3-9D9C-595038A4DF8B}.Release|Any CPU.ActiveCfg = Release|x86
 		{D3A5336F-6CB0-4CD3-9D9C-595038A4DF8B}.Release|x86.ActiveCfg = Release|x86
 		{D3A5336F-6CB0-4CD3-9D9C-595038A4DF8B}.Release|x86.Build.0 = Release|x86
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Debug|x86.Build.0 = Debug|Any CPU
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD5D9927-C008-4BE6-BA31-C22C75F41B54}.Release|x86.Build.0 = Release|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Debug|x86.Build.0 = Debug|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Release|x86.ActiveCfg = Release|Any CPU
+		{33FD1073-8CDE-445D-B07F-2E01FFE37CE7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
