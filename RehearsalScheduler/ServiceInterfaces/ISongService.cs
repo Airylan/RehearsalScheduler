@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EntityInterfaces;
 
-namespace EntityInterfaces
+namespace ServiceInterfaces
 {
-    public interface IRepertoire
+    public interface ISongService
     {
-        List<ISong> Songs { get; }
+        ISong MakeSongFromTitle(string title);
     }
 }

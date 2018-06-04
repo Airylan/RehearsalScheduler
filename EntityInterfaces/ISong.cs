@@ -8,5 +8,7 @@ namespace EntityInterfaces
 {
     public interface ISong
     {
+        string Title { get; }
+        IEnumerable<string> Tags { get; }
     }
 }

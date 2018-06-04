@@ -41,7 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IRepertoireService.cs" />
+    <Compile Include="ISongService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EntityInterfaces\EntityInterfaces.csproj">
+      <Project>{81586545-b682-4395-b072-14f38b656eb7}</Project>
+      <Name>EntityInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
