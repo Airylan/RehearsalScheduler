@@ -4,7 +4,7 @@
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<Media Id="1" EmbedCab="yes" Cabinet="RehearsalScheduler.cab" />
+		<Media Id="1" EmbedCab="no" Cabinet="RehearsalScheduler.cab" />
 
 		<Feature Id="ProductFeature" Title="RehearsalScheduler" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
@@ -18,7 +18,7 @@
 				<Directory Id="INSTALLFOLDER" Name="RehearsalScheduler" />
 			</Directory>
       <Directory Id="ProgramMenuFolder">
-        <Directory Id="ApplicationProgramsFolder" Name="Rehearsal Scheduler"/>
+        <Directory Id="ApplicationProgramsFolder" Name="RehearsalScheduler"/>
       </Directory>
     </Directory>
 	</Fragment>
@@ -42,31 +42,31 @@
   <Fragment>
     <ComponentGroup Id="ShellDependencies" Directory="INSTALLFOLDER">
       <Component Id="Shell.exe.config">
-        <File Id="Shell.exe.config" Name="Shell.exe.config" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Shell.exe.config" Name="Shell.exe.config" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="Microsoft.Practices.ServiceLocation.dll">
-        <File Id="Microsoft.Practices.ServiceLocation.dll" Name="Microsoft.Practices.ServiceLocation.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Microsoft.Practices.ServiceLocation.dll" Name="Microsoft.Practices.ServiceLocation.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="Microsoft.Practices.Unity.Configuration.dll">
-        <File Id="Microsoft.Practices.Unity.Configuration.dll" Name="Microsoft.Practices.Unity.Configuration.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Microsoft.Practices.Unity.Configuration.dll" Name="Microsoft.Practices.Unity.Configuration.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="Microsoft.Practices.Unity.dll">
-        <File Id="Microsoft.Practices.Unity.dll" Name="Microsoft.Practices.Unity.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Microsoft.Practices.Unity.dll" Name="Microsoft.Practices.Unity.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="Microsoft.Practices.Unity.RegistrationByConvention.dll">
-        <File Id="Microsoft.Practices.Unity.RegistrationByConvention.dll" Name="Microsoft.Practices.Unity.RegistrationByConvention.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Microsoft.Practices.Unity.RegistrationByConvention.dll" Name="Microsoft.Practices.Unity.RegistrationByConvention.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="Prism.dll">
-        <File Id="Prism.dll" Name="Prism.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Prism.dll" Name="Prism.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="Prism.Unity.Wpf.dll">
-        <File Id="Prism.Unity.Wpf.dll" Name="Prism.Unity.Wpf.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Prism.Unity.Wpf.dll" Name="Prism.Unity.Wpf.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="Prism.Wpf.dll">
-        <File Id="Prism.Wpf.dll" Name="Prism.Wpf.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="Prism.Wpf.dll" Name="Prism.Wpf.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
       <Component Id="System.Windows.Interactivity.dll">
-        <File Id="System.Windows.Interactivity.dll" Name="System.Windows.Interactivity.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+        <File Id="System.Windows.Interactivity.dll" Name="System.Windows.Interactivity.dll" KeyPath="yes" Source="$(var.Shell.TargetDir)" />
       </Component>
     </ComponentGroup>
   </Fragment>
@@ -74,10 +74,10 @@
   <Fragment>
     <ComponentGroup Id="EntitiesDependencies" Directory="INSTALLFOLDER">
       <Component Id="EntityFramework.dll">
-        <File Id="EntityFramework.dll" Name="EntityFramework.dll" KeyPath="yes" Source="$(var.Entities.TargetPath)" />
+        <File Id="EntityFramework.dll" Name="EntityFramework.dll" KeyPath="yes" Source="$(var.Entities.TargetDir)" />
       </Component>
       <Component Id="EntityFramework.SqlServer.dll">
-        <File Id="EntityFramework.SqlServer.dll" Name="EntityFramework.SqlServer.dll" KeyPath="yes" Source="$(var.Entities.TargetPath)" />
+        <File Id="EntityFramework.SqlServer.dll" Name="EntityFramework.SqlServer.dll" KeyPath="yes" Source="$(var.Entities.TargetDir)" />
       </Component>
     </ComponentGroup>
   </Fragment>
