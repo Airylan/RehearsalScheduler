@@ -1,6 +1,8 @@
 ﻿using System.Windows;
 using Microsoft.Practices.Unity;
 using Prism.Unity;
+using ServiceInterfaces;
+using Services;
 using Shell.Views;
 
 namespace Shell
@@ -16,6 +18,7 @@ namespace Shell
             base.ConfigureContainer();
 
             Container.RegisterType<MainWindowView>();
+            Container.RegisterType<IRepertoireService, RepertoireService>();
         }
     }
 }
