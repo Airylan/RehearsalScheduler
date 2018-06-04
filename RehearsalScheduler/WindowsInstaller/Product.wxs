@@ -4,10 +4,11 @@
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+		<Media Id="1" EmbedCab="yes" Cabinet="RehearsalScheduler.cab" />
 
 		<Feature Id="ProductFeature" Title="RehearsalScheduler" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationStartMenuShortcuts" />
 		</Feature>
 	</Product>
 
@@ -16,20 +17,88 @@
 			<Directory Id="ProgramFilesFolder">
 				<Directory Id="INSTALLFOLDER" Name="RehearsalScheduler" />
 			</Directory>
-		</Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Rehearsal Scheduler"/>
+      </Directory>
+    </Directory>
 	</Fragment>
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-      <Component Id="Shell">
-        <File Id="Shell.exe" Name="$(var.Shell.TargetFileName)" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      <Component Id="Shell" Guid="*">
+        <File Id="Shell.exe" Name="$(var.Shell.TargetFileName)" KeyPath="yes" Source="$(var.Shell.TargetPath)" Checksum="yes" />
       </Component>
-      <Component Id="Entities">
+      <ComponentGroupRef Id="ShellDependencies"/>
+      <Component Id="Entities" Guid="*">
         <File Id="Entities.dll" Name="$(var.Entities.TargetFileName)" KeyPath="yes" Source="$(var.Entities.TargetPath)" />
       </Component>
-      <Component Id="Services">
+      <ComponentGroupRef Id="EntitiesDependencies"/>
+      <Component Id="Services" Guid="*">
         <File Id="Services.dll" Name="$(var.Services.TargetFileName)" KeyPath="yes" Source="$(var.Services.TargetPath)" />
       </Component>
 		</ComponentGroup>
 	</Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ShellDependencies" Directory="INSTALLFOLDER">
+      <Component Id="Shell.exe.config">
+        <File Id="Shell.exe.config" Name="Shell.exe.config" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="Microsoft.Practices.ServiceLocation.dll">
+        <File Id="Microsoft.Practices.ServiceLocation.dll" Name="Microsoft.Practices.ServiceLocation.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="Microsoft.Practices.Unity.Configuration.dll">
+        <File Id="Microsoft.Practices.Unity.Configuration.dll" Name="Microsoft.Practices.Unity.Configuration.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="Microsoft.Practices.Unity.dll">
+        <File Id="Microsoft.Practices.Unity.dll" Name="Microsoft.Practices.Unity.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="Microsoft.Practices.Unity.RegistrationByConvention.dll">
+        <File Id="Microsoft.Practices.Unity.RegistrationByConvention.dll" Name="Microsoft.Practices.Unity.RegistrationByConvention.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="Prism.dll">
+        <File Id="Prism.dll" Name="Prism.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="Prism.Unity.Wpf.dll">
+        <File Id="Prism.Unity.Wpf.dll" Name="Prism.Unity.Wpf.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="Prism.Wpf.dll">
+        <File Id="Prism.Wpf.dll" Name="Prism.Wpf.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+      <Component Id="System.Windows.Interactivity.dll">
+        <File Id="System.Windows.Interactivity.dll" Name="System.Windows.Interactivity.dll" KeyPath="yes" Source="$(var.Shell.TargetPath)" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="EntitiesDependencies" Directory="INSTALLFOLDER">
+      <Component Id="EntityFramework.dll">
+        <File Id="EntityFramework.dll" Name="EntityFramework.dll" KeyPath="yes" Source="$(var.Entities.TargetPath)" />
+      </Component>
+      <Component Id="EntityFramework.SqlServer.dll">
+        <File Id="EntityFramework.SqlServer.dll" Name="EntityFramework.SqlServer.dll" KeyPath="yes" Source="$(var.Entities.TargetPath)" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="ProgramMenuFolder">
+      <Component Id="ApplicationStartMenuShortcuts">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+             Name="Rehearsal Scheduler"
+           Description="Rehearsal scheduler"
+            Target="[#Shell.exe]"
+                  WorkingDirectory="ProgramFilesFolder"/>
+        
+        <Shortcut Id="UninstallProduct"
+                  Name="Uninstall Rehearsal Scheduler"
+                  Description="Uninstalls Rehearsal Scheduler"
+                  Target="[System64Folder]msiexec.exe"
+                  Arguments="/x [ProductCode]"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\RehearsalScheduler" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
 </Wix>
