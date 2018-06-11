@@ -1,9 +1,10 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Microsoft.Practices.Unity;
 using Prism.Unity;
 using ServiceInterfaces;
 using Services;
-using Shell.Views;
+using DesktopGui.Views;
 
 namespace Shell
 {
@@ -19,6 +20,14 @@ namespace Shell
 
             Container.RegisterType<MainWindowView>();
             Container.RegisterType<IRepertoireService, RepertoireService>();
+
+            // Navigation
+            RegisterNavigation();
+        }
+
+        private void RegisterNavigation()
+        {
+            //Container.RegisterTypeForNavigation<CreateRehearsalView>();
         }
     }
 }

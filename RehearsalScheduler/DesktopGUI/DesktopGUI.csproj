@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44AF48FC-3AD7-49DC-AFD5-434B6EECE033}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Shell</RootNamespace>
-    <AssemblyName>Shell</AssemblyName>
+    <ProjectGuid>{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>DesktopGUI</RootNamespace>
+    <AssemblyName>DesktopGUI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -75,17 +72,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Bootstrapper.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -99,6 +85,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -109,30 +99,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Entities\Entities.csproj">
-      <Project>{b0ba3f37-e2a3-42dd-b41d-f45b63d5378b}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\EntityInterfaces\EntityInterfaces.csproj">
-      <Project>{81586545-b682-4395-b072-14f38b656eb7}</Project>
-      <Name>EntityInterfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Services\Services.csproj">
-      <Project>{b8512470-2199-4042-b28e-645fce78bba3}</Project>
-      <Name>Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DesktopGUI\DesktopGUI.csproj">
-      <Project>{2782cc8a-f7f3-4dc0-8e4f-1a655e7ecc20}</Project>
-      <Name>DesktopGUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServiceInterfaces\ServiceInterfaces.csproj">
-      <Project>{dd5d9927-c008-4be6-ba31-c22c75f41b54}</Project>
-      <Name>ServiceInterfaces</Name>
-    </ProjectReference>
+    <Page Include="Views\MainWindowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

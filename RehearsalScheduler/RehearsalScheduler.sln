@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesTests", "..\Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityInterfaces", "..\EntityInterfaces\EntityInterfaces.csproj", "{81586545-B682-4395-B072-14F38B656EB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopGUI", "DesktopGUI\DesktopGUI.csproj", "{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,14 @@ Global
 		{81586545-B682-4395-B072-14F38B656EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{81586545-B682-4395-B072-14F38B656EB7}.Release|x86.ActiveCfg = Release|Any CPU
 		{81586545-B682-4395-B072-14F38B656EB7}.Release|x86.Build.0 = Release|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Debug|x86.Build.0 = Debug|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Release|x86.ActiveCfg = Release|Any CPU
+		{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

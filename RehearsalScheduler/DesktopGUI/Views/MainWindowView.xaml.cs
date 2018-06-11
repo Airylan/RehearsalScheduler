@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Shell.Views
+namespace DesktopGui.Views
 {
     /// <summary>
     /// Interaction logic for MainWindowView.xaml

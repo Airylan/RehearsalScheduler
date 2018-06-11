@@ -10,7 +10,7 @@ using Microsoft.Practices.Unity;
 using Prism.Mvvm;
 using Prism.Regions;
 
-namespace Shell.ViewModels
+namespace DesktopGui.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
