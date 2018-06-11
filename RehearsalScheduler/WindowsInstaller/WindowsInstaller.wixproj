@@ -45,7 +45,7 @@
       <RefTargetDir>INSTALLFOLDER</RefTargetDir>
     </ProjectReference>
     <ProjectReference Include="..\DesktopGUI\DesktopGUI.csproj">
-      <Name>DesktopGUI</Name>
+      <Name>DesktopGui</Name>
       <Project>{2782cc8a-f7f3-4dc0-8e4f-1a655e7ecc20}</Project>
       <Private>True</Private>
       <DoNotHarvest>True</DoNotHarvest>

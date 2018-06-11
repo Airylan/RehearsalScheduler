@@ -29,6 +29,9 @@
         <File Id="Shell.exe" Name="$(var.Shell.TargetFileName)" KeyPath="yes" Source="$(var.Shell.TargetPath)" Checksum="yes" />
       </Component>
       <ComponentGroupRef Id="ShellDependencies"/>
+      <Component Id="DesktopGui" Guid="*">
+        <File Id="DesktopGui.dll" Name="$(var.DesktopGUI.TargetFileName)" KeyPath="yes" Source="$(var.DesktopGUI.TargetPath)" />
+      </Component>
       <Component Id="Entities" Guid="*">
         <File Id="Entities.dll" Name="$(var.Entities.TargetFileName)" KeyPath="yes" Source="$(var.Entities.TargetPath)" />
       </Component>

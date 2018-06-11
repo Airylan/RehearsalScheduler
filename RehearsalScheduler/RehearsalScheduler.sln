@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesTests", "..\Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityInterfaces", "..\EntityInterfaces\EntityInterfaces.csproj", "{81586545-B682-4395-B072-14F38B656EB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopGUI", "DesktopGUI\DesktopGUI.csproj", "{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopGui", "DesktopGUI\DesktopGui.csproj", "{2782CC8A-F7F3-4DC0-8E4F-1A655E7ECC20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

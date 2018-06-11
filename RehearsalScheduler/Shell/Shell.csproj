@@ -125,9 +125,9 @@
       <Project>{b8512470-2199-4042-b28e-645fce78bba3}</Project>
       <Name>Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DesktopGUI\DesktopGUI.csproj">
+    <ProjectReference Include="..\DesktopGUI\DesktopGui.csproj">
       <Project>{2782cc8a-f7f3-4dc0-8e4f-1a655e7ecc20}</Project>
-      <Name>DesktopGUI</Name>
+      <Name>DesktopGui</Name>
     </ProjectReference>
     <ProjectReference Include="..\ServiceInterfaces\ServiceInterfaces.csproj">
       <Project>{dd5d9927-c008-4be6-ba31-c22c75f41b54}</Project>

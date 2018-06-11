@@ -27,7 +27,7 @@ namespace Shell
 
         private void RegisterNavigation()
         {
-            //Container.RegisterTypeForNavigation<CreateRehearsalView>();
+            Container.RegisterTypeForNavigation<CreateRehearsalView>();
         }
     }
 }
