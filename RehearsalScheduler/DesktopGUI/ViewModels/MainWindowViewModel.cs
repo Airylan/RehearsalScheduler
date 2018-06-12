@@ -24,9 +24,16 @@ namespace DesktopGui.ViewModels
         public ObservableCollection<ListBoxItem> NavigationEntries { get; }
             = new ObservableCollection<ListBoxItem>(new List<ListBoxItem>
             {
-                new ListBoxItem { Tag = "", Content = "" }
+                new ListBoxItem { Tag = "CreateRehearsalView", Content = "Create Rehearsal" }
             });
         public IRegionManager _regionManager { get; }
+
+        private ListBoxItem _currentView;
+        public ListBoxItem CurrentView
+        {
+            get { return _currentView; }
+            set { SetProperty(ref _currentView, value); Navigate(_currentView?.Tag?.ToString() ?? ""); }
+        }
 
         private void Navigate(string tag)
         {

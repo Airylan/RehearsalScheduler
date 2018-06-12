@@ -18,10 +18,10 @@
         </Grid.ColumnDefinitions>
         
         <!-- Navigation Panel -->
-        <ListBox Background="{Binding NavigationBackground}" ItemsSource="{Binding NavigationEntries}" />
+        <ListBox Background="{Binding NavigationBackground}" ItemsSource="{Binding NavigationEntries}" SelectedItem="{Binding CurrentView}" />
 
         <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
 
-        <ContentControl prism:RegionManager.RegionName="{Binding MainContentControlName}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <ContentControl Grid.Column="2" prism:RegionManager.RegionName="ContentPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Window>

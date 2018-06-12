@@ -5,8 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesktopGui.Views"
              mc:Ignorable="d" 
+             xmlns:vm="clr-namespace:DesktopGui.ViewModels"
+             xmlns:prism="http://prismlibrary.com/"
+             d:DataContext="{d:DesignInstance vm:CreateRehearsalViewModel}"
+             prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-            
+        <Label Content=" Making a new rehearsal ! " />
     </Grid>
 </UserControl>
