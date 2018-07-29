@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
-using Microsoft.Practices.Unity;
 using Prism.Mvvm;
 using Prism.Regions;
+using Unity.Attributes;
 
 namespace DesktopGui.ViewModels
 {
